@@ -1,0 +1,68 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+
+html {
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
+
+  video {
+    transform: scaleX(-1);
+  }
+
+  .instructions {
+    text-align: center;
+    p {
+      max-width: 63ch;
+    }
+  }
+
+  a#btn {
+    background-color: darken($color: #ffffff, $amount: 5);
+    padding: 1em;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    top: 1em;
+    color: black;
+    text-decoration: none;
+    &:hover {
+      background-color: #fff;
+    }
+    &:active {
+      background-color: darken($color: #ffffff, $amount: 5);
+    }
+  }
+
+  button#btn {
+    position: absolute;
+    bottom: 1.2em;
+    background-color: darken($color: #ffffff, $amount: 5);
+    padding: 1em;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    &:hover {
+      background-color: #ffffff;
+    }
+  }
+
+  .flash {
+    background-color: white;
+    z-index: 9001;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+  }
+}
