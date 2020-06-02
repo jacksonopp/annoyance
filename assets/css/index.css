@@ -67,4 +67,9 @@ html {
   display: none;
 }
 
+.canvas {
+  max-width: 400px;
+  max-height: 400px;
+}
+
 /*# sourceMappingURL=index.css.map */
