@@ -47,7 +47,7 @@ async function afterClick(seconds, tracks) {
   });
 
   axios
-    .post('https://ec2-18-217-92-181.us-east-2.compute.amazonaws.com:3000/api/', {
+    .post('https://annoyance.herokuapp.com/api', {
       seconds,
     })
     .then((res) => {

@@ -1,4 +1,4 @@
-axios.get('https://ec2-18-217-92-181.us-east-2.compute.amazonaws.com:3000/api/').then((res) => {
+axios.get('https://annoyance.herokuapp.com/api').then((res) => {
   const compressed = compressArray(handleData(res.data));
   console.log(compressed);
   renderData(compressed);
