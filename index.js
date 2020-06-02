@@ -23,7 +23,7 @@ function startVideo(stream) {
   let seconds = 0;
 
   const timer = setInterval(() => {
-    ++seconds;
+    seconds = seconds + 5;
     console.log(seconds);
   }, 5000);
 
