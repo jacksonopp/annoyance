@@ -25,7 +25,7 @@ function startVideo(stream) {
   const timer = setInterval(() => {
     ++seconds;
     console.log(seconds);
-  }, 1000);
+  }, 5000);
 
   btn.addEventListener('click', (e) => {
     e.preventDefault();
