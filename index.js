@@ -34,11 +34,25 @@ function startVideo(stream) {
   });
 }
 
-function afterClick(seconds, tracks) {
+async function afterClick(seconds, tracks) {
   console.log(`Final Time: ${seconds} seconds`);
-  console.log(tracks);
   tracks.forEach((track) => track.stop());
-  setTimeout(() => {
-    window.location.pathname = '/done.html';
-  }, 3000);
+  const flash = document.querySelector('.flash');
+  flash.classList.remove('hide');
+  await new Promise((resolve, reject) => {
+    setTimeout(() => {
+      flash.classList.add('hide');
+      resolve();
+    }, 200);
+  });
+
+  axios
+    .post('http://ec2-18-217-92-181.us-east-2.compute.amazonaws.com:3000/api/', {
+      seconds,
+    })
+    .then((res) => {
+      console.log(res.data);
+      window.location.pathname = '/done.html';
+    })
+    .catch((err) => console.log(err));
 }
