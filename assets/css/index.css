@@ -17,6 +17,13 @@ html {
   transform: scaleX(-1);
   max-width: 100vw;
 }
+.container .overlay {
+  width: 250px;
+  height: 350px;
+  border: 2px solid red;
+  border-radius: 50%;
+  position: absolute;
+}
 .container .instructions {
   text-align: center;
 }

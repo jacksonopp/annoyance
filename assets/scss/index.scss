@@ -19,6 +19,14 @@ html {
     max-width: 100vw;
   }
 
+  .overlay {
+    width: 250px;
+    height: 350px;
+    border: 2px solid red;
+    border-radius: 50%;
+    position: absolute;
+  }
+
   .instructions {
     text-align: center;
     p {
