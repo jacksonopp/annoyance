@@ -1,0 +1,53 @@
+@mixin overlay() {
+  background-color: rgba($color: white, $alpha: 0.5);
+  color: rgba($color: blue, $alpha: 0.7);
+  padding: 0.25rem;
+  margin: 0.25rem;
+  border: 1px solid rgba($color: blue, $alpha: 0.7);
+  border-radius: 4px;
+}
+
+.video-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  .outline-container {
+    width: 200px;
+    height: 300px;
+    border: 3px solid red;
+    border-radius: 50%;
+    position: absolute;
+    top: 1rem;
+    box-shadow: 0 0 100px 1px rgb(255, 255, 255);
+  }
+  video {
+    transform: scaleX(-1);
+  }
+  .overlays {
+    position: absolute;
+    top: 0.5rem;
+    > div {
+      @include overlay();
+    }
+    h1 {
+      font-size: 20px;
+      text-align: center;
+    }
+    #calculating {
+      flex-direction: column;
+    }
+  }
+  .give-up {
+    position: absolute;
+    bottom: 0.5rem;
+    button {
+      @include overlay();
+      &:hover {
+        background-color: white;
+        cursor: pointer;
+      }
+    }
+  }
+}

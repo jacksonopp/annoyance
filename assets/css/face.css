@@ -1,0 +1,56 @@
+.video-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+}
+.video-container .outline-container {
+  width: 200px;
+  height: 300px;
+  border: 3px solid red;
+  border-radius: 50%;
+  position: absolute;
+  top: 1rem;
+  box-shadow: 0 0 100px 1px white;
+}
+.video-container video {
+  transform: scaleX(-1);
+}
+.video-container .overlays {
+  position: absolute;
+  top: 0.5rem;
+}
+.video-container .overlays > div {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 255, 0.7);
+  padding: 0.25rem;
+  margin: 0.25rem;
+  border: 1px solid rgba(0, 0, 255, 0.7);
+  border-radius: 4px;
+}
+.video-container .overlays h1 {
+  font-size: 20px;
+  text-align: center;
+}
+.video-container .overlays #calculating {
+  flex-direction: column;
+}
+.video-container .give-up {
+  position: absolute;
+  bottom: 0.5rem;
+}
+.video-container .give-up button {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 255, 0.7);
+  padding: 0.25rem;
+  margin: 0.25rem;
+  border: 1px solid rgba(0, 0, 255, 0.7);
+  border-radius: 4px;
+}
+.video-container .give-up button:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=face.css.map */

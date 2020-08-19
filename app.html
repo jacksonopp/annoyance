@@ -3,17 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script defer src="./index.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js" integrity="sha256-T/f7Sju1ZfNNfBh7skWn0idlCBcI3RwdLSS4/I7NQKQ=" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>face-api.js POC</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+    <script defer src="./assets/js/face-api.min.js"></script>
+    <script defer src="./assets/js/face-detect.js"></script>
     <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/face.css" />
   </head>
+
   <body>
-    <div class="container">
-      <video autoplay playsinline></video>
-      <div class="overlay"></div>
-      <button id="btn">Take Photo Manually</button>
+    <div class="flash" style="display: none; transition: all 0.2s ease;"></div>
+    <div class="video-container">
+      <video id="video" width="600" height="400" autoplay muted playsinline></video>
+      <div class="outline-container">
+        <div id="head_outline" hidden="true"></div>
+        <div id="eye-l"></div>
+        <div id="eye-r"></div>
+      </div>
+      <!-- <div id="hl"></div> -->
+      <div id="vl"></div>
+
+      <div class="overlays">
+        <div id="closer" class="video_overlays" style="display: none;">
+          <h1>Move closer to the camera!</h1>
+        </div>
+        <div id="missing" class="video_overlays" style="display: none;">
+          <h1>No face detected</h1>
+        </div>
+        <div id="angle" class="video_overlays" style="display: none;">
+          <h1>Face camera</h1>
+        </div>
+        <div id="direction" class="video_overlays" style="display: none;">
+          <h1>Direction</h1>
+        </div>
+        <div id="good" class="video_overlays" style="display: none;">
+          <h1>Taking photo</h1>
+        </div>
+        <div id="calculating" class="video_overlays" style="display: none;">
+          <h1>Calculating...</h1>
+        </div>
+      </div>
+      <div class="give-up hide">
+        <button id="giveup">I give up</button>
+      </div>
     </div>
-    <div class="flash hide"></div>
+    <canvas id="still-photo"></canvas>
+    <div class="photo-div">
+      <image id="photo"></image>
+    </div>
   </body>
 </html>

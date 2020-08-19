@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey</title>
+    <link rel="stylesheet" href="./assets/css/index.css" />
+  </head>
+  <body>
+    <div class="survey">
+      <h1>Please answer these questions:</h1>
+      <form>
+        <div class="q q1">
+          <p>How many <strong>seconds</strong> did it <i>feel</i> like you waited before the continue button appeared</p>
+          <input type="number" name="feel" id="feel" />
+        </div>
+        <div class="q q2">
+          <p>Do you feel like you waited too long?</p>
+          <div>
+            <div class="group"><input type="radio" id="yes" name="yes" value="Yes" /> <label for="yes">Yes</label></div>
+
+            <div class="group"><input type="radio" id="no" name="yes" value="No" /> <label for="no">No</label></div>
+          </div>
+        </div>
+        <div>
+          <button type="submit" id="btn">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
